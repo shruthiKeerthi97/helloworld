@@ -15,6 +15,6 @@ public class HelloWorldApplication {
 
 	@GetMapping("/")
 	public String home() {
-		return "Hello from Spring Boot Docker!";
+		return "Hello from Spring Boo!";
 	}
 }
