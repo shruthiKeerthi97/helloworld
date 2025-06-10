@@ -1,4 +1,4 @@
-name: Spring Boot CI
+name: Build and Test
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -23,5 +23,5 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
-      - name: Run tests
+      - name: Run Tests
         run: mvn test
