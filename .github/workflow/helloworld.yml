@@ -1,4 +1,4 @@
-name: Spring Boot - Hello World CI
+name: Spring Boot CI
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-        run: mvn clean package -DskipTests
+        run: mvn clean install
 
       - name: Run tests
         run: mvn test
